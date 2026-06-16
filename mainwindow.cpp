@@ -4,6 +4,9 @@
 #include <QPushButton>
 #include <QDateTime>
 #include "login.h"
+#include <QFile>
+#include <QTextStream>
+#include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -179,10 +182,92 @@ void MainWindow::showItemDetails(int index)
     QMessageBox::information(this, "Item Details", info);
 }
 
+
+
+
 //  Logout
 void MainWindow::on_logoutButton_clicked()
 {
     login *log = new login();
     log->show();
     this->close();
+}
+
+
+
+
+void MainWindow::saveToFile(const QString &filePath)
+{
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        QMessageBox::warning(this, "Error", "Cannot save file");
+        return;
+    }
+
+    QTextStream out(&file);
+
+    for (int i = 0; i < itemCount; i++)
+    {
+        out << items[i].name << ","
+            << items[i].quantity << ","
+            << items[i].price << ","
+            << items[i].category << ","
+            << items[i].lastUpdated << "\n";
+    }
+
+    file.close();
+    QMessageBox::information(this, "Saved", "Data saved successfully!");
+}
+
+void MainWindow::loadFromFile(const QString &filePath)
+{
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        QMessageBox::warning(this, "Error", "Cannot open file");
+        return;
+    }
+
+    QTextStream in(&file);
+
+    itemCount = 0;  // clear old data
+
+    while (!in.atEnd())
+    {
+        QString line = in.readLine();
+        QStringList parts = line.split(",");
+
+        if (parts.size() < 5)
+            continue;
+
+        Item item;
+        item.name = parts[0];
+        item.quantity = parts[1].toInt();
+        item.price = parts[2].toDouble();
+        item.category = parts[3];
+        item.lastUpdated = parts[4];
+
+        items[itemCount++] = item;
+    }
+
+    file.close();
+    updateTable();
+
+    QMessageBox::information(this, "Loaded", "Data imported successfully!");
+}
+void MainWindow::on_saveButton_clicked()
+{
+    QString filePath = QFileDialog::getSaveFileName(this, "Save File", "", "CSV Files (*.csv)");
+    if (!filePath.isEmpty())
+        saveToFile(filePath);
+}
+
+void MainWindow::on_loadButton_clicked()
+{
+    QString filePath = QFileDialog::getOpenFileName(this, "Open File", "", "CSV Files (*.csv)");
+    if (!filePath.isEmpty())
+        loadFromFile(filePath);
 }

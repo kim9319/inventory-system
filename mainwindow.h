@@ -31,9 +31,12 @@ private slots:
     void on_removeButton_clicked();
     void on_editButton_clicked();
     void on_logoutButton_clicked();
-
+    void on_saveButton_clicked();
+    void on_loadButton_clicked();
     void showItemDetails(int index);
-
+private:
+    void saveToFile(const QString &filePath);
+    void loadFromFile(const QString &filePath);
 private:
     Ui::MainWindow *ui;
 
