@@ -44,7 +44,8 @@
    <item row="4" column="0">
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(80, 80, 80);</string>
+      <string notr="true">background-color: rgb(80, 80, 80);
+</string>
      </property>
      <property name="title">
       <string>Backpack </string>
@@ -136,7 +137,7 @@ QLineEdit:focus {
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>120</y>
+        <y>110</y>
         <width>111</width>
         <height>91</height>
        </rect>
@@ -145,6 +146,9 @@ QLineEdit:focus {
        <font>
         <pointsize>48</pointsize>
        </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
       </property>
       <property name="styleSheet">
        <string notr="true"/>

@@ -2,7 +2,8 @@
 #define TUTORIAL_H
 
 #include <QDialog>
-
+//In C++, the extern keyword primarily tells the compiler that a variable or function exists and is defined in another source file (translation unit).
+extern int *sharedPassword;
 namespace Ui {
 class tutorial;
 }
@@ -17,6 +18,7 @@ public:
 
 private slots:
     void on_backButton_clicked();
+    void on_forgorButton_clicked();
 
 private:
     Ui::tutorial *ui;

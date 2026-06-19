@@ -6,20 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>623</width>
-    <height>518</height>
+    <width>1061</width>
+    <height>936</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0.544318, y1:0, x2:0.54, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.985782 rgba(65, 64, 79, 255), stop:1 rgba(255, 255, 255, 255));</string>
+  </property>
   <widget class="QLabel" name="tutorialLabel">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>30</y>
+     <x>740</x>
+     <y>40</y>
      <width>251</width>
-     <height>461</height>
+     <height>651</height>
     </rect>
    </property>
    <property name="layoutDirection">
@@ -28,21 +31,27 @@
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.549829, y1:1, x2:0.488152, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(76, 66, 113, 255));</string>
+   </property>
    <property name="frameShape">
     <enum>QFrame::Shape::StyledPanel</enum>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;ADD BUTTON&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Enter item name&lt;/p&gt;&lt;p&gt;- Enter quantity&lt;/p&gt;&lt;p&gt;- Click Add&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;REMOVE BUTTON&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Enter row number&lt;/p&gt;&lt;p&gt;- Click Remove&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;EDIT BUTTON- Enter row number&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Enter new values&lt;/p&gt;&lt;p&gt;- Click Edit&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;LOGOUT BUTTON&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Return to login page&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;X button &lt;/span&gt;&lt;/p&gt;&lt;p&gt;-Exit &lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Default Password:1234&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;&lt;br/&gt;ADD BUTTON&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Enter item name&lt;/p&gt;&lt;p&gt;- Enter quantity&lt;/p&gt;&lt;p&gt;- Click Add&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;REMOVE BUTTON&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Enter row number&lt;/p&gt;&lt;p&gt;- Click Remove&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;EDIT BUTTON- Enter row number&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Enter new values&lt;/p&gt;&lt;p&gt;- Click Edit&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;LOGOUT BUTTON&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Return to login page&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;X button &lt;/span&gt;&lt;/p&gt;&lt;p&gt;-Exit &lt;/p&gt;&lt;p&gt;SAVE BUTTON&lt;/p&gt;&lt;p&gt;-save data&lt;/p&gt;&lt;p&gt;LOAD BUTTON &lt;/p&gt;&lt;p&gt;-load data&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>70</y>
-     <width>221</width>
-     <height>131</height>
+     <x>50</x>
+     <y>40</y>
+     <width>171</width>
+     <height>81</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
    </property>
    <property name="text">
     <string>Return to login page</string>
@@ -51,11 +60,14 @@
   <widget class="QTextBrowser" name="textBrowser">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>271</y>
+     <x>740</x>
+     <y>710</y>
      <width>256</width>
-     <height>221</height>
+     <height>191</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -70,6 +82,65 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Su Dao Yi&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Lee Joon Hang&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Chai Chuan Wei&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="forgorEdit">
+   <property name="geometry">
+    <rect>
+     <x>198</x>
+     <y>230</y>
+     <width>311</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    border: 2px solid #a0a0a0;
+    border-radius: 14px;      /* Controls the corner roundness */
+    padding: 4px 8px;        /* Keeps the text away from the borders */
+     /* Keeps the background white */
+}
+
+/* Optional: Change border color when clicked/focused */
+QLineEdit:focus {
+    border: 2px solid #0078d4; 
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Enter new password</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>240</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(12, 12, 15);</string>
+   </property>
+   <property name="text">
+    <string>Change password: </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="forgorButton">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>230</y>
+     <width>91</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">alternate-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:1 rgba(255, 255, 255, 255));
+border-top-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
+   <property name="text">
+    <string>comfirm </string>
    </property>
   </widget>
  </widget>

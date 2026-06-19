@@ -32,6 +32,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableWidget->horizontalHeader()->setStretchLastSection(true);
 }
 
+
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -164,6 +165,7 @@ void MainWindow::updateTable()
     }
 }
 
+
 //  Show details
 void MainWindow::showItemDetails(int index)
 {
@@ -195,7 +197,7 @@ void MainWindow::on_logoutButton_clicked()
 
 
 
-
+//save
 void MainWindow::saveToFile(const QString &filePath)
 {
     QFile file(filePath);

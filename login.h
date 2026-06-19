@@ -2,7 +2,8 @@
 #define LOGIN_H
 
 #include <QDialog>
-
+extern int *sharedPassword;
+int checkuser(int);
 namespace Ui {
 class login;
 }

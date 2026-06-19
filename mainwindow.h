@@ -40,8 +40,8 @@ private:
 private:
     Ui::MainWindow *ui;
 
-    Item items[199];   // ✅ array
-    int itemCount = 0; // ✅ number of items
+    Item items[199];   //  array
+    int itemCount = 0; //  number of items
 
     void updateTable();
 
