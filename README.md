@@ -50,9 +50,14 @@ The **Inventory Management System** is designed for small to medium retail opera
 ### Product Categorization
 - Built-in categories: 💡 *Electronics*, 🍗 *Food*, 👕 *Clothing*, ✏️ *Stationery*, and *Other*.
 
+<img width="1334" height="614" alt="image" src="https://github.com/user-attachments/assets/b110814a-95a1-4ca0-b3b5-d30d143af042" />
+
 ### Data Persistence (CSV Support)
 - **Export / Save:** Save current inventory records to standard `.csv` format.
 - **Import / Load:** Load inventory records seamlessly from existing CSV files.
+
+<img width="982" height="641" alt="image" src="https://github.com/user-attachments/assets/30140b69-ddbb-4f4c-be4d-569899b7d303" />
+
 
 ### In-App Tutorial & Help
 - Built-in guide explaining operations and buttons.
